@@ -12,3 +12,6 @@ In addotion, this project contain Body Coordination Test (BCT).
 
 ## Future
 In the close future I'm planning to add for this project some running plans for some levels.
+
+## Link to the project
+[Nitzan Cohen - Running trainer.](https://nitzanc07.github.io/running/)
