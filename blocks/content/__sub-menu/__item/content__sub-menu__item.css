@@ -1,0 +1,20 @@
+.content__sub-menu__item{
+    width: 120px;
+    height: 40px;
+    margin: 0 3px;
+    padding: 0;
+    font-size: 16px;
+}
+
+.content__sub-menu__item:first-of-type{
+    margin-right: 0;
+}
+.content__sub-menu__item:last-of-type{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 582px){
+    .content__sub-menu__item{
+        margin: 3px 0;
+    }
+}

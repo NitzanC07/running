@@ -1,0 +1,16 @@
+.content__sub-menu__button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(150, 0, 0, 1);
+    background-color: transparent;
+    border: 3px solid rgba(100, 0, 0, 1);
+    border-radius: 10px;
+}
+
+.content__sub-menu__button:hover{
+    background-color: rgba(255, 200, 200, 0.5);
+    box-shadow: 1px 1px 10px #aaa;
+    border-color: #ffa;
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitzan - Calculators</title>
+  <script src="Scripts/Calculators.js"></script>
+  <!-- <link rel="stylesheet" href="Styles/Style_version1.css"> -->
+</head>
+  <body class="page">
+    <header>
+      <img src="LongLogo2.png" id="logo" alt="ניצן כהן - אימון ריצה וכושר"></img>
+    </header>
+ 
+      <div class="calculators" id="vo2cooperTest">
+        <div class="BackToMenu_div"><a href="#main"><button class="BackToMenu_Button">חזרה</button></a></div>
+        <p>חישוב צריכת חמצן מירבית (VO<sub>2</sub> max) לפי בדיקת שדה - מבחן קופר:</p>
+        <p>
+          צריכת חמצן מירבית (צח"מ) זה הוא מדד שמצביע על היכולת האירובית המירבית של מתאמן.
+          כלומר זהו השלב שבו הגוף ממצה את השימוש בחמצן בפעילות גופנית, אם האדם יגביר את 
+          עצימות הפעילות מעבר הוא לא יצרוך יותר חמצן בכל נשימה. בד"כ בנקודת הצח"מ נמצאת גם
+          נקודת הדופק המירבי.
+          בדיקת שדה של צח"מ נעשית באמצעות <b>מבחן קופר (Cooper) שבמסגרתו על האדם לרוץ במשך 12 דקות
+          למרחק גדול ככל שהוא יכול.</b>
+        </p>          
+          <table>
+            <tr id="gender_vo2cooper">
+              <th>מין:</th>
+              <td><input class="inputGen" type="radio" id="gen3" name="genderCooper" value="male" checked>
+              <label for="gen3">זכר</label></td>
+              <td><input class="inputGen" type="radio" id="gen4" name="genderCooper" value="female">
+              <label for="gen4">נקבה</label></td>
+            </tr>
+            <tr>
+              <th><label>גיל (בשנים):</label></th>
+              <td colspan="2"><input type="number" id="vo2cooperAGE" placeholder=0></td>
+            </tr>
+            <tr>
+              <th><label>משקל (ק"ג):</label></th>
+              <td colspan="2"><input type="number" id="vo2cooperWEIGHT" placeholder=0></td>
+            </tr>
+            <tr>
+              <th><label>מרחק ריצה מירבי (במטרים):</label></th>
+              <td colspan="2"><input type="number" id="vo2cooperDISTANCE" placeholder=0></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2"><button class="result_button" onclick="VO2max_ver2();">חשב</button></td>
+            </tr>
+            <tr>
+              <td>תוצאה:</td>
+              <td colspan="2"><div class="result" id="vo2cooperRESULT">0</div></td>
+            </tr>
+          </table>
+        
+      
+        <table id="male_Cooper">
+        <caption>גברים:</caption>
+          <tr class="row0">
+            <th>גיל</th>
+            <th>חלש מאוד</th>
+            <th>חלש</th>
+            <th>בינוני</th>
+            <th>טוב</th>
+            <th>טוב מאוד</th>
+            <th>מעולה</th>
+          </tr>
+          <tr class="row2">
+            <td>13-19</td>
+            <td id="male_a0">עד 24</td>
+            <td id="male_a1">25-30</td>
+            <td id="male_a2">31-34</td>
+            <td id="male_a3">35-38</td>
+            <td id="male_a4">39-41</td>
+            <td id="male_a5">42 ומעלה</td>
+          </tr>
+          <tr class="row1">
+            <td>20-29</td>
+            <td id="male_b0">עד 33</td>
+            <td id="male_b1">34-36.4</td>
+            <td id="male_b2">36.5-42.4</td>
+            <td id="male_b3">42.5-46.4</td>
+            <td id="male_b4">46.5-52.4</td>
+            <td id="male_b5">52.5 ומעלה</td>
+          </tr>
+          <tr class="row2">
+            <td>30-39</td>
+            <td id="male_c0">עד 31.5</td>
+            <td id="male_c1">31.6-35.4</td>
+            <td id="male_c2">35.5-40.9</td>
+            <td id="male_c3">41-44.9</td>
+            <td id="male_c4">45-49.4</td>
+            <td id="male_c5">49.5 ומעלה</td>
+          </tr>
+          <tr class="row1">
+            <td>40-49</td>
+            <td id="male_d0">עד 30.2</td>
+            <td id="male_d1">30.3-33.5</td>
+            <td id="male_d2">33.6-38.9</td>
+            <td id="male_d3">39-43.7</td>
+            <td id="male_d4">43.8-48</td>
+            <td id="male_d5">48 ומעלה</td>
+          </tr>
+          <tr class="row2">
+            <td>50-59</td>
+            <td id="male_e0">עד 26.1</td>
+            <td id="male_e1">26.2-30.9</td>
+            <td id="male_e2">31-35.7</td>
+            <td id="male_e3">35.8-40.9</td>
+            <td id="male_e4">41-45.3</td>
+            <td id="male_e5">45.4 ומעלה</td>
+          </tr>
+          <tr class="row1">
+            <td>60+</td>
+            <td id="male_f0">עד 20.5</td>
+            <td id="male_f1">20.6-26</td>
+            <td id="male_f2">26.1-32.2</td>
+            <td id="male_f3">32.3-36.4</td>
+            <td id="male_f4">36.5-44.2</td>
+            <td id="male_f5">44.2 ומעלה</td>
+          </tr>
+        </table><br>
+
+        <table id="female_Cooper">
+          <caption>נשים:</caption>
+          <tr class="row0">
+            <th>גיל</th>
+            <th>חלש מאוד</th>
+            <th>חלש</th>
+            <th>בינוני</th>
+            <th>טוב</th>
+            <th>טוב מאוד</th>
+            <th>מעולה</th>
+          </tr>
+          <tr class="row2">
+            <td>13-19</td>
+            <td id="female_a0">עד 25</td>
+            <td id="female_a1">25.1-30.9</td>
+            <td id="female_a2">31-34.9</td>
+            <td id="female_a3">35-38.9</td>
+            <td id="female_a4">39-41.9</td>
+            <td id="female_a5">42 ומעלה</td>
+          </tr>
+          <tr class="row1">
+            <td>20-29</td>
+            <td id="female_b0">עד 23.6</td>
+            <td id="female_b1">23.7-28.9</td>
+            <td id="female_b2">29-32.9</td>
+            <td id="female_b3">33-36.9</td>
+            <td id="female_b4">37-41</td>
+            <td id="female_b5">41.1 ומעלה</td>
+          </tr>
+          <tr class="row2">
+            <td>30-39</td>
+            <td id="female_c0">עד 22.8</td>
+            <td id="female_c1">22.9-26.9</td>
+            <td id="female_c2">27-31.4</td>
+            <td id="female_c3">31.5-35.6</td>
+            <td id="female_c4">35.7-40</td>
+            <td id="female_c5">40.1 ומעלה</td>
+          </tr>
+          <tr class="row1">
+            <td>40-49</td>
+            <td id="female_d0">עד 21</td>
+            <td id="female_d1">21.1-24.4</td>
+            <td id="female_d2">24.5-28.9</td>
+            <td id="female_d3">29-32.8</td>
+            <td id="female_d4">32.9-36.9</td>
+            <td id="female_d5">37 ומעלה</td>
+          </tr>
+          <tr class="row2">
+            <td>50-59</td>
+            <td id="female_e0">עד 20.2</td>
+            <td id="female_e1">20.3-22.7</td>
+            <td id="female_e2">22.8-26.9</td>
+            <td id="female_e3">27-31.4</td>
+            <td id="female_e4">31.5-35.7</td>
+            <td id="female_e5">35.8 ומעלה</td>
+          </tr>
+          <tr class="row1">
+            <td>60+</td>
+            <td id="female_f0">עד 17.5</td>
+            <td id="female_f1">17.6-20.1</td>
+            <td id="female_f2">20.2-24.4</td>
+            <td id="female_f3">24.5-30.2</td>
+            <td id="female_f4">30.3-31.4</td>
+            <td id="female_f5">31.5 ומעלה</td>
+          </tr>
+        </table><br>
+
+        <table id="vo2avg_table">
+          <caption>ממוצע צח"מ לפי אוכלוסיות שונות:</caption>
+          <tr class="row0">
+            <th>סוג האוכלוסיה</th>
+            <th>גברים</th>
+            <th>נשים</th>
+          </tr>
+          <tr class="row2">
+            <td>לא מאומנים</td>
+            <td id="male_1">40-45</td>
+            <td id="female_1">30-35</td>
+          </tr>
+          <tr class="row1">
+            <td>ספורטאי אנארובי</td>
+            <td id="male_2">45-55</td>
+            <td id="female_2">35-45</td>
+          </tr>
+          <tr class="row2">
+            <td>ספורטאי אירובי</td>
+            <td id="male_3">65-75</td>
+            <td id="female_3">55-65</td>
+          </tr>
+          <tr class="row1">
+            <td>ספורטאי אירובי עילית</td>
+            <td id="male_4">75-85</td>
+            <td id="female_4">65-75</td>
+          </tr>
+        </table><br>
+
+      </div>
+    
+    
+    
+      <div class="calculators" id="vo2hrTest">
+        <div class="BackToMenu_div"><a href="#main"><button class="BackToMenu_Button">חזרה</button></a></div>
+        <p>חישוב צריכת חמצן מירבית (VO<sub>2</sub> max) לפי דופק:</p>
+        <table>
+          <tr id="gender_vo2hr">
+            <th>מין:</th>
+            <td><input class="inputGen" type="radio" id="gen3" name="genderHR" value="male" checked><label for="gen3">זכר</label></td>
+            <td><input class="inputGen" type="radio" id="gen4" name="genderHR" value="female"><label for="gen4">נקבה</label></td>
+          </tr>
+          <tr>
+            <th><label>גיל (בשנים):</label></th>
+            <td colspan="2"><input type="number" id="vo2hrAGE" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>דופק מנוחה (15 שניות):</label></th>
+            <td colspan="2"><input type="number" id="vo2hrREST" placeholder=0></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td colspan="2"><button onclick="VO2max_ver1();">חשב</button></td>
+          </tr>
+          <tr>
+            <th>תוצאה:</th>
+            <td colspan="2"><div class="result" id="vo2hrRESULT">0</div><br></td>
+          </tr>
+        </table>
+      </div>
+    
+
+
+      <div class="calculators" id="hrtargetsTest">
+        <div class="BackToMenu_div"><a href="#main"><button class="BackToMenu_Button">חזרה</button></a></div>
+        <p>חישוב דופק מטרה:</p> 
+        <table>
+          <tr id="gender_hrTargets">
+            <th>מין:</th>
+            <td><input class="inputGen" type="radio" id="gen3" name="gender_hrTargets" value="male" checked><label for="gen3">זכר</label></td>
+            <td><input class="inputGen" type="radio" id="gen4" name="gender_hrTargets" value="female"><label for="gen4">נקבה</label></td>
+          </tr>
+          <tr>
+            <th><label>גיל (בשנים):</label></th>
+            <td colspan="2"><input type="number" id="hrTargetsAGE" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>דופק מנוחה (15 שניות):</label></th>
+            <td colspan="2"><input type="number" id="hrTargetsREST" placeholder=0></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td colspan="2"><button onclick="cal_HR_target();">חשב</button></td>
+          </tr>
+          <tr>
+            <th>תוצאה:</th>
+            <td colspan="2"><div class="result" id="hrTargetsRESULT">תוצאה:</div></td>
+          </tr>
+        </table>
+      </div>
+    
+
+
+    
+      <div class="calculators" id="fatPercentageTest_skinfold">
+        <div class="BackToMenu_div"><a href="#main"><button class="BackToMenu_Button">חזרה</button></a></div>
+        <p>חישוב אחוז שומן (לפי קפלי עור):</p>
+        <p>
+          אחוז השומן הוא מדד שמצביע על החלק היחסי של שומן בגוף תוך הורדת מסת הגוף הרזה
+          (עצם, שריר, איברים, דם וכד') השומן בגוף הוא מרכיב חיוני בשמירה על המשקל. 
+          רקמת השומן צורכת פחות אנרגיה מרקמת השריר, כך שככל שיש בגוף פחות שומן ויותר שריר 
+          אז האדם יכול לצרוך יותר קלוריות לפני שהוא עולה במשקל. כמו כן, השומן חיוני לפעילות
+          הסדירה של הגוף, שכן הוא שומר על טמפרטורת הגוף, מרפד ושומר על איברים ורקמות,
+          והשומן הוא גם למעשה הצורה העיקרית שבה נאגרת אנרגיה בגוף. <b>כמו כן, אצל כמות
+            השומן החיונית המינימלית אצל גברים שדרושה נעה בטווח של 2-5%, ולעומת זאת אצל נשים
+            נדרשת כמות מינימלית חיונית בטווח 10-12% שומן ממשקל הגוף הכולל.</b><br>
+          ישנן מספר דרכים למדידת אחוז השומן בגוף: דרך אחת היא באמצעות מוליכות חשמלית שמתבססת
+          על כך שהשומן אינו מוליך חשמל, דרך אחרת היא באמצעות קליפר שמודד את עובי הקפלים במספר
+          מקומות בגוף (כשהמקום העיקרי היא כמובן הבטן), ודרך נוספת היא באמצעות מדידת היקפים.
+        </p>
+        <table>
+          <tr id="gender_skinfold">
+            <th>מין:</th>
+            <td><input class="inputGen" type="radio" id="gen1" name="genderSkinfold" value="male" checked><label for="gen1">זכר</label></td>
+            <td><input class="inputGen" type="radio" id="gen2" name="genderSkinfold" value="female"><label for="gen2">נקבה</label></td>
+          </tr>
+          <tr>
+            <th><label>גיל (בשנים): </label></th>
+            <td colspan="2"><input type="number" id="ageSkinfold" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>משקל (ק"ג):</label></th>
+            <td colspan="2"><input type="number" id="weightSkinfold" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>קפל עור במותן (מ"מ):</label></th>
+            <td colspan="2"><input type="number" id="skinfoldWaist" placeholder=0></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td colspan="2"><button onclick="fatPercentageTest_skinfold();">חשב</button></td>
+          </tr>
+          <tr>
+            <th>תוצאה:</th>
+            <td colspan="2"><div class="result" id="fat2RESULT">0</div></td>
+          </tr>
+        </table>
+
+          <table id="fatPercentageTable">
+            <caption>אחוז שומן בגוף לפי אוכלוסיות:</caption>
+            <tr class="row0">
+              <th>סוג אוכלוסיה</th>
+              <th>תקינות</th>
+              <th>גברים</th>
+              <th>נשים</th>
+            </tr>
+            <tr class="row2">
+              <td>שומן חיוני</td>
+              <td>מעולה</td>
+              <td id="male_5">2-5%</td>
+              <td id="female_5">10-12%</td>
+            </tr>
+            <tr class="row1">
+              <td>ספורטאים</td>
+              <td>טוב מאוד</td>
+              <td id="male_6">6-13%</td>
+              <td id="female_6">14-20%</td>
+            </tr>
+            <tr class="row2">
+              <td>מאומנים</td>
+              <td>טוב</td>
+              <td id="male_7">14-17%</td>
+              <td id="female_7">21-24%</td>
+            </tr>
+            <tr class="row1">
+              <td>ממוצע</td>
+              <td>סביר</td>
+              <td id="male_8">18-25%</td>
+              <td id="female_8">25-31%</td>
+            </tr>
+            <tr class="row2">
+              <td>השמנה</td>
+              <td>לא טוב</td>
+              <td id="male_9">25%+</td>
+              <td id="female_9">32%+</td>
+            </tr>
+          </table><br>
+      </div>
+    
+
+    
+      <div class="calculators" id="fatPercentageTest">
+        <div class="BackToMenu_div"><a href="#main"><button class="BackToMenu_Button">חזרה</button></a></div>
+        <p>חישוב אחוז שומן (לפי היקפים):</p>
+        <table>
+          <tr id="gender_fatp">
+            <th>מין:</th>
+            <td><input class="inputGen" type="radio" id="gen1" name="gender" value="male" checked><label for="gen1">זכר</label></td>
+            <td><input class="inputGen" type="radio" id="gen2" name="gender" value="female"><label for="gen2">נקבה</label></td>
+          </tr>
+          <tr>
+            <th><label>היקף מותניים (ס"מ):</label></th>
+            <td colspan="2"><input type="number" id="fatWaist" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>משקל (ק"ג): </label></th>
+            <td colspan="2"><input type="number" id="fatWeight" placeholder=0></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td colspan="2"><button onclick="fatPercentage();">חשב</button></td>
+          </tr>
+          <tr>
+            <th>תוצאה:</th>
+            <td colspan="2"><div class="result" id="fatRESULT">0</div></td>
+          </tr>
+        </table>
+          <br>
+      </div>
+    
+    
+    
+      <div class="calculators" id="bmiTest">
+        <div class="BackToMenu_div"><a href="#main"><button class="BackToMenu_Button">חזרה</button></a></div>
+        <p>חישוב מסת הגוף BMI:</p>
+        <p>
+          Body Mass Index זה מדד שבודק את היחס בין המשקל לגובה בריבוע. זהו מדד שנותן הערכה כמותית
+          ומשמש ככלי לבדיקת תקינות משקל האדם. עם זאת במקרים מסוימים מדד ה-BMI יכול להראות ערך גבוה
+          ובלתי תקין לכאורה בגלל מסת שריר גדולה.
+        </p>
+        <table>
+          <tr>
+            <th><label>גיל (בשנים):</label></th>
+            <td><input type="number" id="bmiAge" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>משקל (ק"ג):</label></th>
+            <td><input type="number" id="bmiWeight" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>גובה (ס"מ):</label></th>
+            <td><input type="number" id="bmiHeight" placeholder=0></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><button onclick="BMI();">חשב</button></td>
+          </tr>
+          <tr>
+            <th>תוצאה:</th>
+            <td><div class="result" id="bmiRESULT">0</div></td>
+          </tr>
+        </table>
+      </div>
+    
+
+    <footer>
+      <h3 class="footer">ניצן כהן - מאמן ריצות ארוכות<br>
+      טלפון: 050-3131570<br>
+      דוא"ל: nitzancohen@hotmail.com</h3>
+  </footer>
+    </div>
+  </body>
+</html>

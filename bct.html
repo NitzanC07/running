@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nitzan - Body Coordination Test</title>
+  <meta charset="utf-8"/>
+  <script src="Scripts/bct.js"></script>
+  <link rel="stylesheet" href="Styles/Style_version3.css">
+</head>
+  <body>
+    <div id="main">
+      <img src="LongLogo2.png" id="logo" alt="ניצן כהן - אימון ריצה וכושר"></img>
+      <h1 id="logoAlternative">ניצן כהן, מאמן ריצה וכושר - 050-3131570, nitzancohen@hotmail.com</h1>
+
+      <div class="coordinationTest" id="personalDetails">
+        <p id="back"><a href="#main"><button class="BackToMenu">חזרה</button></a></p>
+        <h3>פרטיי הנבדק</h3>     
+        <p>הפרטים לא נשמרים בשום מאגר נתונים ולא נעשה בהם שימוש בשום דרך. כדי לשמור את תוצאות המבדקים אפשר לבצע צילום מסך ולשמור את התוצאות באופן אישי.</p>
+        <table>
+          <tr>
+            <th><label>שם פרטי ומשפחה:</label></td>
+            <td colspan="2"><input type="text" id="namePerson" placeholder="שם פרטי ומשפחה"></td>
+          </tr>
+          <tr>
+            <th>מין:</th>
+            <td  id="genderPerson"><input class="inputGen" type="radio" id="gen_m" name="gender" value="זכר" checked>
+                <label for="gen3">זכר</label></td>
+            <td  id="genderPerson"><input class="inputGen" type="radio" id="gen_f" name="gender" value="נקבה">
+                <label for="gen4">נקבה</label></td>
+          </tr>
+          <tr>
+            <th><label>גיל (בשנים):</label></td>
+            <td colspan="2"><input type="number" id="agePerson" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>תאריך המבדק:</label></td>
+            <td colspan="2"><input type="date" id="datePerson" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>שעת המבדק:</label>  </td></td>
+            <td colspan="2"><input type="time" id="timePerson" placeholder=0></td>
+          </tr>
+        </table>
+        <p>
+          <button onclick="personalDetails();">סכם</button><br><br>
+        </p>
+      </div>
+
+
+      <div class="coordinationTest" id="equilibriumTest">
+        <p id="back"><a href="#main"><button class="BackToMenu">חזרה</button></a></p>
+        <h3>מבדק 1: הליכה על קורות</h3>
+        <p>
+          <b>מטרת המבדק:</b> בדיקת יכולת שיווי משקל דינאמי המחייבת יכולת קיניסטטית ושליטה 
+          גופנית כללית. <br>
+          <b>מטרת המשימה:</b> ללכת לאחור על גבי שלוש קורות ברוחב שונה עד לסופן - 
+          מקסימום 8 צעדים ללא נפילות.<br>
+          <b>מהלך המבדק:</b> הנבדק יילך על שלוש קורות בגובה 3 ס"מ וברוחב שונה - 
+          6 ס"מ, 4.5 ס"מ ו-3 ס"מ. הנבדק יבצע הליכה לפנים ולאחור פעם אחת לתרגול
+          על כל קורה, ולאחר מכן במבדק הוא יילך לאחור שלוש פעמים על כל קורה עקב 
+          לצד אגודל.<br>
+          <b>ניקוד:</b> כל צעד תקין לאחור נספר עד שהנבדק משלים שמונה צעדים או נופל.
+          בסה"כ ניתן להגיע במבדק עד 24 נקודות (8 צעדים על כל קורה).
+        </p>
+        <table>
+          <tr>
+            <td></td>
+            <td>מספר צעדים תקינים</td>
+          </tr>
+          <tr>
+            <th><label>קורה ראשונה (6 ס"מ):</label></th>
+            <td><input type="number" id="equilibrium60" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>קורה שניה (4.5 ס"מ):</label></th>
+            <td><input type="number" id="equilibrium45" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>קורה שלישית (3 ס"מ):</label></th>
+            <td><input type="number" id="equilibrium30" placeholder=0></td>
+          </tr>
+          <tr>
+            <td>תוצאה:</td>
+            <td><div class="RESULT" id="equilibriumRESULT1">0</div></td>
+          </tr>
+        </table> 
+        <p>
+          <button onclick="equilibriumTest1();">סכם</button><br><br>
+        </p>
+      </div>
+      
+
+      <div class="coordinationTest" id="jumpingOneLegTest">
+        <p id="back"><a href="#main"><button class="BackToMenu">חזרה</button></a></p>
+        <h3>מבדק 2: ניתורים על רגל מעל מכשול</h3>
+        <p>
+          <b>מטרת המבדק:</b> בדיקה של יכולת השליטה בגוף במימד של הערכת גובה ומודעות
+          מרחבית.<br>
+          <b>מטרת המשימה:</b> לנתר על רגל אחת מעבר למכשול בגובה משתנה לאחר תנופת הרצה.
+          לאחר מעבר של המכשול יש לנחות על רגל אחת ולבצע לפחות עוד שני ניתורים.<br>
+          <b>מהלך המבדק:</b> מעבר כל גובה יתבצע ברגל ימין או ברגל שמאל, בהתאם להעדפת
+          הנבדק, יש לאפשר לנבדק מרחק הרצה על רגל אחת של כמטר וחצי. בכל גובה יש 
+          לאפשר לנבדק עד שלושה ניסיונות. אם הנבדק עבר את המכשול בנסיון הראשון או השני
+          אז ניתן לעבור כבר לשלב הבא, אך אם הנבדק נכשל בשלושה ניסיונות באותו גובה
+          אז המבדק מפסיק.<br>
+          <b>ניקוד:</b> מעבר בניסיון הראשון בכל גובה מזכה ב-3 נקודות, מעבר בנסיון
+          השני בכל גובה מזכה ב-2 נקודות ומעבר בנסיון השלישי בכל גובה מזכה בנקודה אחת.
+        </p>
+        <table id="tableTest2">
+          <tr>
+            <td></td>
+            <td id="capt" colspan="10">הצלחה או כישלון ורגל מועדפת</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="col2" id="capt" colspan="3">נסיון 1</td>
+            <td class="col5" id="capt" colspan="3">נסיון 2</td>
+            <td class="col8" id="capt" colspan="3">נסיון 3</td>
+            <td class="col11" id="capt" colspan="3"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="col2">הצלחה</td>
+            <td class="col3">ימין</td>
+            <td class="col4">שמאל</td>
+            <td class="col5">הצלחה</td>
+            <td class="col6">ימין</td>
+            <td class="col7">שמאל</td>
+            <td class="col8">הצלחה</td>
+            <td class="col9">ימין</td>
+            <td class="col10">שמאל</td>
+            <td class="col11">כישלון</td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 1 - 5 ס"מ:</label></th>
+            <td class="col2" id="stage1"><input type="radio" name="stage1" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs11"><input type="radio" name="stage1_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs11"><input type="radio" name="stage1_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage1"><input type="radio" name="stage1" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs12"><input type="radio" name="stage1_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs12"><input type="radio" name="stage1_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage1"><input type="radio" name="stage1" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs13"><input type="radio" name="stage1_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs13"><input type="radio" name="stage1_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage1"><input type="radio" name="stage1" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 2 - 10 ס"מ:</label></th>
+            <td class="col2" id="stage2"><input type="radio" name="stage2" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs21"><input type="radio" name="stage2_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs21"><input type="radio" name="stage2_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage2"><input type="radio" name="stage2" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs22"><input type="radio" name="stage2_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs22"><input type="radio" name="stage2_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage2"><input type="radio" name="stage2" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs23"><input type="radio" name="stage2_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs23"><input type="radio" name="stage2_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage2"><input type="radio" name="stage2" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 3 - 15 ס"מ:</label></th>
+            <td class="col2" id="stage3"><input type="radio" name="stage3" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs31"><input type="radio" name="stage3_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs31"><input type="radio" name="stage3_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage3"><input type="radio" name="stage3" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs32"><input type="radio" name="stage3_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs32"><input type="radio" name="stage3_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage3"><input type="radio" name="stage3" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs33"><input type="radio" name="stage3_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs33"><input type="radio" name="stage3_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage3"><input type="radio" name="stage3" class="inputTest2"  value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 4 - 20 ס"מ:</label></th>
+            <td class="col2" id="stage4"><input type="radio" name="stage4" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs41"><input type="radio" name="stage4_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs41"><input type="radio" name="stage4_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage4"><input type="radio" name="stage4" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs42"><input type="radio" name="stage4_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs42"><input type="radio" name="stage4_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage4"><input type="radio" name="stage4" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs43"><input type="radio" name="stage4_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs43"><input type="radio" name="stage4_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage4"><input type="radio" name="stage4" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 5 - 25 ס"מ:</label></th>
+            <td class="col2" id="stage5"><input type="radio" name="stage5" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs51"><input type="radio" name="stage5_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs51"><input type="radio" name="stage5_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage5"><input type="radio" name="stage5" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs52"><input type="radio" name="stage5_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs52"><input type="radio" name="stage5_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage5"><input type="radio" name="stage5" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs53"><input type="radio" name="stage5_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs53"><input type="radio" name="stage5_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage5"><input type="radio" name="stage5" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 6 - 30 ס"מ:</label></th>
+            <td class="col2" id="stage6"><input type="radio" name="stage6" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs61"><input type="radio" name="stage6_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs61"><input type="radio" name="stage6_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage6"><input type="radio" name="stage6" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs62"><input type="radio" name="stage6_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs62"><input type="radio" name="stage6_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage6"><input type="radio" name="stage6" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs63"><input type="radio" name="stage6_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs63"><input type="radio" name="stage6_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage6"><input type="radio" name="stage6" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 7 - 35 ס"מ:</label></th>
+            <td class="col2" id="stage7"><input type="radio" name="stage7" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs71"><input type="radio" name="stage7_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs71"><input type="radio" name="stage7_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage7"><input type="radio" name="stage7" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs72"><input type="radio" name="stage7_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs72"><input type="radio" name="stage7_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage7"><input type="radio" name="stage7" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs73"><input type="radio" name="stage7_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs73"><input type="radio" name="stage7_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage7"><input type="radio" name="stage7" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 8 - 40 ס"מ:</label></th>
+            <td class="col2" id="stage8"><input type="radio" name="stage8" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs81"><input type="radio" name="stage8_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs81"><input type="radio" name="stage8_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage8"><input type="radio" name="stage8" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs82"><input type="radio" name="stage8_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs82"><input type="radio" name="stage8_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage8"><input type="radio" name="stage8" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs83"><input type="radio" name="stage8_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs83"><input type="radio" name="stage8_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage8"><input type="radio" name="stage8" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 9 - 45 ס"מ:</label></th>
+            <td class="col2" id="stage9"><input type="radio" name="stage9" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs91"><input type="radio" name="stage9_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs91"><input type="radio" name="stage9_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage9"><input type="radio" name="stage9" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs92"><input type="radio" name="stage9_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs92"><input type="radio" name="stage9_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage9"><input type="radio" name="stage9" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs93"><input type="radio" name="stage9_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs93"><input type="radio" name="stage9_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage9"><input type="radio" name="stage9" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 10 - 50 ס"מ:</label></th>
+            <td class="col2" id="stage10"><input type="radio" name="stage10" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs101"><input type="radio" name="stage10_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs101"><input type="radio" name="stage10_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage10"><input type="radio" name="stage10" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs102"><input type="radio" name="stage10_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs102"><input type="radio" name="stage10_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage10"><input type="radio" name="stage10" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs103"><input type="radio" name="stage10_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs103"><input type="radio" name="stage10_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage10"><input type="radio" name="stage10" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 11 - 55 ס"מ:</label></th>
+            <td class="col2" id="stage11"><input type="radio" name="stage11" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs111"><input type="radio" name="stage11_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs111"><input type="radio" name="stage11_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage11"><input type="radio" name="stage11" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs112"><input type="radio" name="stage11_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs112"><input type="radio" name="stage11_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage11"><input type="radio" name="stage11" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs113"><input type="radio" name="stage11_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs113"><input type="radio" name="stage11_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage11"><input type="radio" name="stage11" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr class="tr1">
+            <th><label>שלב 12 - 60 ס"מ:</label></th>
+            <td class="col2" id="stage12"><input type="radio" name="stage12" class="inputTest2" value="3"></td>
+            <td class="col3" id="legs121"><input type="radio" name="stage12_01" class="inputTest2" value="right"></td>
+            <td class="col4" id="legs121"><input type="radio" name="stage12_01" class="inputTest2" value="left"></td>
+            <td class="col5" id="stage12"><input type="radio" name="stage12" class="inputTest2" value="2"></td>
+            <td class="col6" id="legs122"><input type="radio" name="stage12_02" class="inputTest2" value="right"></td>
+            <td class="col7" id="legs122"><input type="radio" name="stage12_02" class="inputTest2" value="left"></td>
+            <td class="col8" id="stage12"><input type="radio" name="stage12" class="inputTest2" value="1"></td>
+            <td class="col9" id="legs123"><input type="radio" name="stage12_03" class="inputTest2" value="right"></td>
+            <td class="col10" id="legs123"><input type="radio" name="stage12_03" class="inputTest2" value="left"></td>
+            <td class="col11" id="stage12"><input type="radio" name="stage12" class="inputTest2" value="0" checked></td>
+          </tr>
+          <tr>
+            <td>תוצאה:</td>
+            <td colspan="10"><div class="RESULT" id="jumpingOneLegRESULT1">0</div></td>
+          </tr>
+        </table>
+        <p>
+          <button onclick="jumpingOneLegTest2();">סכם</button><br><br>
+        </p>
+      </div>
+
+
+      <div class="coordinationTest" id="jumpingSideToSideTest">
+        <p id="back"><a href="#main"><button class="BackToMenu">חזרה</button></a></p>
+        <h3>מבדק 3: ניתורים מצד לצד</h3>
+        <p>
+          <b>מטרת המבדק:</b> בדיקת יכולת הנעת הגוף מצד לצד, הלוך וחזור, בזמן הקצר 
+          ביותר ובתדירות גבוהה.<br>
+          <b>מטרת המשימה:</b> לנתר מצד לצד של כפיס עץ על גבי משטח מספר פעמים מירבי
+          ככל שניתן ב-15 שניות.<br>
+          <b>מהלך המבדק:</b> הנבדק נעמד מצד אחד של כפיס העץ עם רגליים צמודות ועליו
+          לנתר מצד לצד מהר ככל שהוא יכול במשך 15 שניות. הניתורים צריכים להיות
+          עם רגליים צמודות (לא רגל אחרי רגל, במצב זה הקפיצה נפסלת), וחובה על הנבדק
+          להשאר בתוך גבולות המשטח.<br>
+          <b>ניקוד:</b> מספר הניתורים המצטבר בשני ניסיונות.
+        </p>
+        <table>
+          <tr>
+            <td></td>
+            <td>מספר ניתורים תקינים</td>
+          </tr>
+          <tr>
+            <th><label>נסיון ראשון:</label></th>
+            <td><input type="number" id="firstSet" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>נסיון שני:</label></th>
+            <td><input type="number" id="SecondSet" placeholder=0></td>
+          </tr>
+          <tr>
+            <td>תוצאה:</td>
+            <td><div class="RESULT" id="jumpingSideToSideRESULT1">0</div></td>
+          </tr>
+        </table> 
+        <p>
+          <button onclick="jumpingSideToSide();">סכם</button><br><br>
+        </p>
+      </div>
+
+
+      <div class="coordinationTest" id="passOverTest">
+        <p id="back"><a href="#main"><button class="BackToMenu">חזרה</button></a></p>
+        <h3>מבדק 4: מעבר בין משטחים</h3>
+        <p>
+          <b>מטרת המבדק:</b> בדיקת יכולת הנעת הגוף ממקום למקום בזמן הקצר ביותר
+          ובתדירות גבוהה.<br>
+          <b>מטרת המשימה:</b> לעבור ממשטח למשטח הצידה מספר פעמים רב ככל האפשר 
+          במשך 20 שניות.<br>
+          <b>מהלך המבדק:</b> על הנבדק לעמוד על משטח אחד ולהרים בידיו את המשטח השני 
+          ולהניח על הרצפה מצידו השני, לצד הגוף, לעבור אל המשטח השני וכך חוזר חלילה.
+          במהלך המשימה יש להשאיר את הרגליים מנותקות מהרצפה ולבצע את המשימה מהר
+          ככל האפשר.<br>
+          <b>ניקוד:</b> כל העברת משטח ומעבר אליו מזכים בנקודה אחת. סה"כ הניקוד 
+          במבדק הוא סכום הנקודות המצטבר בשני ניסיונות.
+        </p>
+        <table>
+          <tr>
+            <td></td>
+            <td>מספר מעברים תקינים</td>
+          </tr>
+          <tr>
+            <th><label>נסיון ראשון:</label></th>
+            <td><input type="number" id="firstSetPass" placeholder=0></td>
+          </tr>
+          <tr>
+            <th><label>נסיון שני:</label></th>
+            <td><input type="number" id="secondSetPass" placeholder=0></td>
+          </tr>
+          <tr>
+            <td>תוצאה:</td>
+            <td><div class="RESULT" id="passOverRESULT1">0</div></td>
+          </tr>
+        </table> 
+          <p>
+            <button onclick="passOverTest();">סכם</button><br><br>
+          </p>
+      </div>
+
+
+      <div class="coordinationTest" id="summary">
+        <p id="back"><a href="#main"><button class="BackToMenu">חזרה</button></a></p>
+        <h3>סיכום מבחן תיאום גופני (BCT)</h3>
+        <p>
+          
+        </p>
+        <table id="summaryTable">
+          <tr>
+            <td id="sumCol1"><div id="namePerson1"></div></td>
+            <td id="sumCol2"><div id="agePerson1"></div></td>
+            <td id="sumCol3"><div id="genderPerson1"></div></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><div id="datePerson1"></div></td>
+            <td><div id="timePerson1"></div></td>
+          </tr>
+          <tr id="sumRow1">
+            <td></td>
+            <th>תוצאת מבדק</th>
+            <th>ניקוד</th>
+          </tr>
+          <tr class="tr1" id="sumRow2">
+            <th>מבדק 1:<br>הליכה על קורות</th>
+            <td id="equilibriumRESULT"></td>
+            <td id="equilibriumSUMMARY"></td>
+          </tr>
+          <tr class="tr1" id="sumRow2">
+            <th>מבדק 2:<br>ניתורים על רגל אחת מעל מכשול</th>
+            <td id="jumpingOneLegRESULT"></td>
+            <td id="jumpingOneLegSUMMARY"></td>
+          </tr>
+          <tr class="tr1" id="sumRow2">
+            <th>מבדק 3:<br>ניתורים מצד לצד</th>
+            <td id="jumpingSideToSideRESULT"></td>
+            <td id="jumpingSideToSideSUMMARY"></td>
+          </tr>
+          <tr class="tr1" id="sumRow2">
+            <th>מבדק 4:<br>מעבר בין משטחים</th>
+            <td id="passOverRESULT"></td>
+            <td id="passOverSUMMARY"></td>
+          </tr>
+          <tr class="tr1" id="sumRow1">
+            <th>סיכום:<br>ציון משוקלל</th>
+            <td></td>
+            <td id="summaryALL"></td>
+          </tr>
+        </table> 
+          <p>
+            <button onclick="summaryALL();">סכם</button><br><br>
+          </p>
+      </div>
+
+      <h1 id="logoAlternative">ניצן כהן, מאמן ריצה וכושר - 050-3131570, nitzancohen@hotmail.com</h1>
+    </div>
+  </body>
+</html>

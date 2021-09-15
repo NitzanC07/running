@@ -1,0 +1,11 @@
+.content__description{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+@media screen and (max-width: 582px){
+    .content__description{
+        max-width: 65%;
+    }
+}

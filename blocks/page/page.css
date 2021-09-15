@@ -1,0 +1,7 @@
+.page {
+    background-color: rgba(100, 0, 0, 1);
+    color: rgba(255, 230, 230, 1);
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}

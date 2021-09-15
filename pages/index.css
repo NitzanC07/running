@@ -1,0 +1,24 @@
+@import url(../vendor/normalize.css);
+
+@import url(../blocks/page/page.css);
+@import url(../blocks/page/__container/page__container.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/main-content/main-content.css);
+
+@import url(../blocks/content/content.css);
+@import url(../blocks/content/_visible/content_visible.css);
+@import url(../blocks/content/__title/content__title.css);
+@import url(../blocks/content/__description/content__description.css);
+@import url(../blocks/content/__menu/__list/content__menu__list.css);
+@import url(../blocks/content/__menu/__item/content__menu__item.css);
+@import url(../blocks/content/__menu/__button/content__menu__button.css);
+@import url(../blocks/content/__sub-menu/__list/content__sub-menu__list.css);
+@import url(../blocks/content/__sub-menu/__item/content__sub-menu__item.css);
+@import url(../blocks/content/__sub-menu/__button/content__sub-menu__button.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__details/footer__details.css);
+@import url(../blocks/footer/__title/footer__title.css);
+@import url(../blocks/footer/__contact-details/footer__contact-details.css);
+@import url(../blocks/footer/__short-logo/footer__short-logo.css);

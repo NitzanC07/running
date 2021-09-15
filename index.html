@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitzan - Evaluation tools</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <div class="page__container">
+    <header class="header">
+      <img class="logo" src="./Images/LongLogo2.png" alt="ניצן כהן - מאמן ריצות ארוכות">
+    </header>
+
+    <main class="main-content">
+
+      <!-- Main menu -->
+      <section class="content content_type_main content_visible" id="main">
+        <h2 class="content__title">עמוד ראשי</h2>
+        <p class="content__description">מי אני?</p>
+        <ul class="content__menu__list">
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_trainning-plans" id="trainning-plans">תוכניות אימון</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_bct" id="bct">מבחן תיאום גופני<br>Body Coordination Test</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+        </ul>
+      </section>
+
+      <!-- Trainnig plans menu -->
+
+      <section class="content content_type_trainning-plans" id="trainning-plans">
+        <h2 class="content__title">תוכניות אימון</h2>
+        <p class="content__description">
+          תוכניות אימון לכל הגילאים החל מהצעד הראשון ועד מרתון.
+        </p>
+        <ul class="content__menu__list">
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_main" id="main">עמוד ראשי</button></li>
+          <li class="content__menu__item"><button type="button" type="button" class="content__menu__button content__menu__button_type_beginerRunning" id="beginerRunning">צעדים ראשונים</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_fiveKmBeginners" id="fiveKmBeginners">מאפס ל-5 ק"מ</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_tenKmBeginners" id="tenKmBeginners">מאפס ל-10 ק"מ</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_halfMarathon" id="halfMarathon">חצי מרתון לרצים מאומנים</button></li>
+        </ul>
+      </section>
+
+      <section class="content content_type_beginerRunning" id="beginerRunning">
+        <h2 class="content__title">צעדים ראשונים לרצים מתחילים</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_trainning-plans" id="trainning-plans">תוכניות אימון</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_fiveKmBeginners" id="fiveKmBeginners">
+        <h2 class="content__title">חמישה קילומטרים ראשונים</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_trainning-plans" id="trainning-plans">תוכניות אימון</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_tenKmBeginners" id="tenKmBeginners">
+        <h2 class="content__title">עשרה קילומטרים ראשונים</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_trainning-plans" id="trainning-plans">תוכניות אימון</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_halfMarathon" id="halfMarathon">
+        <h2 class="content__title">חצי מרתון לרצים מאומנים</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_trainning-plans" id="trainning-plans">תוכניות אימון</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <!-- Calculators menu -->
+
+      <section class="content content_type_calculators" id="calculators">
+        <h2 class="content__title">מחשבוני כושר</h2>
+        <p class="content__description"></p>
+        <ul class="content__menu__list">
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_main" id="main">עמוד ראשי</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_hrTargetCalculate" id="hrTargetCalculate">חישוב דופק מטרה לאימון</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_vo2maxCooperCalculate" id="vo2maxCooperCalculate">חישוב צח"מ (לפי מבחן שדה)</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_vo2maxHrCalculate" id="vo2maxHrCalculate">חישוב צח"מ (לפי דופק)</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_fatPercentageSkinfoldCalculate" id="fatPercentageSkinfoldCalculate">חישוב אחוז שומן (לפי קפלי עור)</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_fatPercentageCalculate" id="fatPercentageCalculate">חישוב אחוז שומן (לפי היקפים)</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_bmiCalculate" id="bmiCalculate">חישוב יחס מסת גוף (BMI)</button></li>
+        </ul>
+      </section>
+
+      <!-- Calculate heart rate training -->
+      <section class="content content_type_hrTargetCalculate" id="hrTargetCalculate">
+        <h2 class="content__title">חישוב דופק מטרה לאימון</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+        <p class="content__description">
+          חישוב דופק מטרה עבור כל סוג של אימון. מה מטרת האימון? אימון בעצימות גבוהה? חיזוק היכולת האירובית? אימון שחרור והורדת עומסים?
+        </p>
+        <form class="content__calculator">
+          <fieldset>
+            <label for="gender">מין:</label>
+            <select id="gender">
+              <option value="male">זכר</option>
+              <option value="female">נקבה</option>
+            </select>
+            <label for="age">גיל (בשנים):</label>
+            <input id="age" type="number" placeholder=0>
+            <label for="hrRest">דופק מנוחה (15 שניות):</label>
+            <input id="hrRest" type="number" placeholder=0>
+            <button type="submit">חשב</button>
+          </fieldset>
+          <fieldset>
+            <div>תוצאה</div>
+          </fieldset>
+        </form>
+      </section>
+      
+      <section class="content content_type_vo2maxCooperCalculate" id="vo2maxCooperCalculate">
+        <h2 class="content__title">צריכת חמצן מירבית (לפי מבחן קופר)</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_vo2maxHrCalculate" id="vo2maxHrCalculate">
+        <h2 class="content__title">חישוב צריכת חמצן מירבית (לפי דופק)</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_fatPercentageSkinfoldCalculate" id="fatPercentageSkinfoldCalculate">
+        <h2 class="content__title">חישוב אחוז שומן (לפי קפלי עור)</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_fatPercentageCalculate" id="fatPercentageCalculate">
+        <h2 class="content__title">חישוב אחוז שומן (לפי היקפים)</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <section class="content content_type_bmiCalculate" id="bmiCalculate">
+        <h2 class="content__title">חישוב יחס מסת גוף (BMI)</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <!-- Body Coordination Test Menu -->
+
+      <section class="content content_type_bct" id="bct">
+        <h2 class="content__title">מבחן תיאום גופני</h2>
+        <p class="content__description">
+          מבחן תיאום גופני, Body Coordination Test, נועד כדי לאפיין את מימד יכולות
+          התיאום הגופני של מוטוריקה גסה העושה שימוש במרבית שרירי הגוף. המבחן משתמש
+          בציונים גולמיים וציון משוקלל (ציוני תקן, טווח נורמלי MQ=100 עם סטיית תקן 
+          של 15), בכל אחד מארבעת הפריטים ובציון הכולל (Schilling & Kiphard, 1974).
+        </p>
+        <ul class="content__menu__list">
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_main" id="main">עמוד ראשי</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_equilibriumTest" id="equilibriumTest">הליכה על קורות</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_jumpingOneLegTest" id="jumpingOneLegTest">ניתורים על רגל אחת</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_jumpingSideToSideTest" id="jumpingSideToSideTest">ניתורים מצד לצד</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_passOverPlatesTest" id="passOverPlatesTest">מעבר בין משטחים</button></li>
+          <li class="content__menu__item"><button type="button" class="content__menu__button content__menu__button_type_bctSummaryTest" id="bctSummaryTest">סיכום מבדק</button></li>
+        </ul>
+      </section>
+
+      <!-- Body Coordination Test - Equilibrium Test. -->
+      <section class="content content_type_equilibriumTest" id="equilibriumTest">
+        <h2 class="content__title">מבחן הליכה על קורות</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_bct" id="bct">מבחן BCT</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <!-- Body Coordination Test - Jump on one leg -->
+      <section class="content content_type_jumpingOneLegTest" id="jumpingOneLegTest">
+        <h2 class="content__title">מבחן ניתור על רגל אחת מעל מכשול</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_bct" id="bct">מבחן BCT</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <!-- Body Coordination Test - Jumping side to side -->
+      <section class="content content_type_jumpingSideToSideTest" id="jumpingSideToSideTest">
+        <h2 class="content__title">מבחן ניתורים מצד לצד</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_bct" id="bct">מבחן BCT</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <!-- Body Coordination Test - Pass over a plates -->
+      <section class="content content_type_passOverPlatesTest" id="passOverPlatesTest">
+        <h2 class="content__title">מבחן מעבר בין משטחים</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_bct" id="bct">מבחן BCT</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+      <!-- Body Coordination Test - Summary of all four tests -->
+      <section class="content content_type_bctSummaryTest" id="bctSummaryTest">
+        <h2 class="content__title">סיכום מבחן תיאום גופני</h2>
+        <ul class="content__sub-menu__list">
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_bct" id="bct">מבחן BCT</button></li>
+          <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
+        </ul>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__details">
+        <p class="footer__title">ניצן כהן - מאמן ריצות ארוכות</p>
+        <ul class="footer__contact-details">
+          <li class="footer__contant-details__item">טלפון: 050-31-31-570</li>
+          <li class="footer__contant-details__item">דוא"ל: nitzancohen@hotmail.com</li>
+        </ul>
+      </div>
+      <img class="footer__short-logo" src="./Images/logoGIF.png" alt="short-logo">
+    </footer>
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

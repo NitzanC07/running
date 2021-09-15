@@ -1,0 +1,30 @@
+.main-content {
+    margin: 25px auto 0;
+    position: relative;
+    background-color: #fff;
+    height: 65vh;
+    border-radius: 10px;
+    /* background-image: url("https://pixnio.com/free-images/2019/01/10/2019-01-10-09-43-44.jpg");
+    background-position: center; */
+}
+
+@media screen and (max-width: 1080px){
+    .main-content{
+        height: 66vh;
+    }    
+}
+@media screen and (max-width: 900px){
+    .main-content{
+        height: 68vh;
+    }    
+}
+@media screen and (max-width: 800px){
+    .main-content{
+        height: 70vh;
+    }    
+}
+@media screen and (max-width: 600px){
+    .main-content{
+        height: 71vh;
+    }    
+}
