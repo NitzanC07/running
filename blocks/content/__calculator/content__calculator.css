@@ -1,0 +1,23 @@
+.content__calculator{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: #aaa; */
+}
+
+@media screen and (max-width: 810px){
+    .content__calculator{
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width: 500px){
+    .content__calculator{
+        width: 100%;
+    }    
+}

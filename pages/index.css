@@ -17,6 +17,12 @@
 @import url(../blocks/content/__sub-menu/__item/content__sub-menu__item.css);
 @import url(../blocks/content/__sub-menu/__button/content__sub-menu__button.css);
 
+@import url(../blocks/content/__calculator/content__calculator.css);
+@import url(../blocks/content/__calculator/__data/content__calculator__data.css);
+@import url(../blocks/content/__calculator/__result/content__calculator__result.css);
+@import url(../blocks/content/__calculator/__submit-button/content__calculator__submit-button.css);
+@import url(../blocks/content/__calculator/__input/content__calculator__input.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__details/footer__details.css);
 @import url(../blocks/footer/__title/footer__title.css);

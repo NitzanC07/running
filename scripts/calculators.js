@@ -596,26 +596,25 @@ function round_number(value, decimals){
     }
   }
 
-  function cal_HR_target(){
-    var age = document.querySelector('#hrTargetsAGE').value;
-    var gender = document.querySelector('#gender_hrTargets input:checked').value;
+  function hrTargets(){
+    const age = document.querySelector('.content__calculator__input_age').value;
+    const gender = document.querySelector('.content__calculator__input_gender').value;
     console.log(gender);
     if (gender === "female"){
-      var HR_max = 226 - age;
+      const hrMax = 226 - age;
     }
     else if (gender === "male"){
-      var HR_max = 220 - age;
+      const hrMax = 220 - age;
     }
-    var HR_rest = document.querySelector('#hrTargetsREST').value;
-    HR_rest = HR_rest * 4;
-    var percentages = [0.70, 0.8, 0.85, 0.90, 0.95, 1];
-    var verbals = ["אימון שחרור / התאוששות", "אימון אירובי קל", "אימון אירובי טמפו", "אימון אנאירובי ", "אימון אנאירובי עצים"];
-    var HR_target = 0;
-    var result = document.querySelector('#hrTargetsRESULT');
-    result.innerHTML = "דופק מירבי מחושב: " + HR_max + " פעימות לדקה." + "<br> דופק מנוחה: " + HR_rest + " פעימות לדקה.<br>";
-    for(i = 0; i < percentages.length-1; i = i + 1){
-      var HR_target = (HR_max - HR_rest)*percentages[i] + HR_rest
-      var nextHRTarget = (HR_max - HR_rest)*percentages[i+1] + HR_rest
-      result.innerHTML += "<br>טווח " + (i+1) + ": " + verbals[i] + "<br>" + percentages[i]*100 + "% מדופק מירבי " + ((Math.round(nextHRTarget))-1) + " - " + Math.round(HR_target) + "<br>";
+    let hrRest = document.querySelector('.content__calculator__input_hrRest').value;
+    hrRest = hrRest * 4;
+    const percentages = [0.70, 0.8, 0.85, 0.90, 0.95, 1];
+    const verbals = ["אימון שחרור / התאוששות", "אימון אירובי קל", "אימון אירובי טמפו", "אימון אנאירובי ", "אימון אנאירובי עצים"];
+    const result = document.querySelector('.content__calculator__result');
+    result.innerHTML = "דופק מירבי מחושב: " + hrMmax + " פעימות לדקה." + "<br> דופק מנוחה: " + hrRest + " פעימות לדקה.<br>";
+    for (i = 0; i < percentages.length-1; i = i + 1){
+      const hrTarget = (hrMax - hrRest)*percentages[i] + hrRest;
+      const nextHrTarget = (hrMax - hrRest)*percentages[i+1] + hrRest;
+      result.innerHTML += "<br>טווח " + (i+1) + ": " + verbals[i] + "<br>" + percentages[i]*100 + "% מדופק מירבי " + ((Math.round(nextHrTarget))-1) + " - " + Math.round(hrTarget) + "<br>";
     }
   }

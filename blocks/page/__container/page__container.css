@@ -1,13 +1,13 @@
 .page__container{
     max-width: 1100px;
-    min-width: 400px;
-    height: 94vh;
+    min-width: 320px;
+    height: 95vh;
     margin: 25px auto;
     position: relative;
 }
 
 @media screen and (max-width: 1160px) {
     .page__container{
-        margin: 25px 25px;
+        margin: 25px 40px;
     }
 }

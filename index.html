@@ -104,20 +104,26 @@
           חישוב דופק מטרה עבור כל סוג של אימון. מה מטרת האימון? אימון בעצימות גבוהה? חיזוק היכולת האירובית? אימון שחרור והורדת עומסים?
         </p>
         <form class="content__calculator">
-          <fieldset class="content__data-form">
-            <label for="gender">מין:</label>
-            <select id="gender">
-              <option value="male">זכר</option>
-              <option value="female">נקבה</option>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator__gender-label" for="gender">מין:</label>
+            <select class="content__calculator__input content__calculator__input_gender" id="gender">
+              <option class="content__calculator__gender_male" id="gender" value="male">זכר</option>11
+              <option class="content__calculator__gender_female" id="gender" value="female">נקבה</option>
             </select>
-            <label for="age">גיל (בשנים):</label>
-            <input id="age" type="number" placeholder=0>
-            <label for="hrRest">דופק מנוחה (15 שניות):</label>
-            <input id="hrRest" type="number" placeholder=0>
-            <button type="submit">חשב</button>
           </fieldset>
-          <fieldset class="content__result-form">
-            <div>תוצאה</div>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_age-label" for="age">גיל (בשנים):</label>
+            <input class="content__calculator__input content__calculator__input_age" id="age" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_hrRest-label" for="hrRest">דופק מנוחה (15 שניות):</label>
+            <input class="content__calculator__input content__calculator__input_hrRest" id="hrRest" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <button class="content__calculator__submit-button" type="submit">חשב</button>
+          </fieldset>
+          <fieldset  class="content__calculator__result">
+            תוצאה
           </fieldset>
         </form>
       </section>

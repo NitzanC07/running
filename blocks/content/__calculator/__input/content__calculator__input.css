@@ -1,0 +1,6 @@
+.content__calculator__input{
+    width: 50%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(100, 0, 0);
+}
