@@ -103,7 +103,7 @@
         <p class="content__description">
           חישוב דופק מטרה עבור כל סוג של אימון. מה מטרת האימון? אימון בעצימות גבוהה? חיזוק היכולת האירובית? אימון שחרור והורדת עומסים?
         </p>
-        <form class="content__calculator">
+        <form class="content__calculator" id="hrTargets">
           <fieldset class="content__calculator__data">
             <label class="content__calculator__gender-label" for="gender">מין:</label>
             <select class="content__calculator__input content__calculator__input_gender" id="gender">
@@ -143,7 +143,29 @@
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
         </ul>
-
+        <form class="content__calculator" id="vo2maxCooper">
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator__gender-label" for="gender">מין:</label>
+            <select class="content__calculator__input content__calculator__input_gender" id="gender">
+              <option class="content__calculator__gender_male" id="gender" value="male">זכר</option>11
+              <option class="content__calculator__gender_female" id="gender" value="female">נקבה</option>
+            </select>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_weight-label" for="weight">משקל (בק"ג):</label>
+            <input class="content__calculator__input content__calculator__input_weight" id="weight" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_distance-label" for="distance">מרחק ריצה (ב-12 דקות):</label>
+            <input class="content__calculator__input content__calculator__input_distance" id="distance" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <button class="content__calculator__submit-button" type="submit">חשב</button>
+          </fieldset>
+          <fieldset  class="content__calculator__result">
+            
+          </fieldset>
+        </form>
       </section>
 
       <section class="content content_type_vo2maxHrCalculate" id="vo2maxHrCalculate">
@@ -152,7 +174,29 @@
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
         </ul>
-
+        <form class="content__calculator" id="vo2maxHr">
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator__gender-label" for="gender">מין:</label>
+            <select class="content__calculator__input content__calculator__input_gender" id="gender">
+              <option class="content__calculator__gender_male" id="gender" value="male">זכר</option>11
+              <option class="content__calculator__gender_female" id="gender" value="female">נקבה</option>
+            </select>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_age-label" for="hrRest">גיל:</label>
+            <input class="content__calculator__input content__calculator__input_age" id="hrRest" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_hrRest-label" for="hrRest">דופק במנוחה (15 שניות):</label>
+            <input class="content__calculator__input content__calculator__input_hrRest" id="hrRest" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <button class="content__calculator__submit-button" type="submit">חשב</button>
+          </fieldset>
+          <fieldset  class="content__calculator__result">
+            
+          </fieldset>
+        </form>
       </section>
 
       <section class="content content_type_fatPercentageSkinfoldCalculate" id="fatPercentageSkinfoldCalculate">
@@ -161,7 +205,33 @@
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
         </ul>
-
+        <form class="content__calculator" id="fatPercentageTestSkinfold">
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator__gender-label" for="gender">מין:</label>
+            <select class="content__calculator__input content__calculator__input_gender" id="gender">
+              <option class="content__calculator__gender_male" id="gender" value="male">זכר</option>11
+              <option class="content__calculator__gender_female" id="gender" value="female">נקבה</option>
+            </select>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_age-label" for="hrRest">גיל:</label>
+            <input class="content__calculator__input content__calculator__input_age" id="age" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_skinfoldWaist-label" for="skinfoldWaist">עובי צביטה במותן (במ"מ):</label>
+            <input class="content__calculator__input content__calculator__input_skinfoldWaist" id="skinfoldWaist" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_weight-label" for="weight">משקל:</label>
+            <input class="content__calculator__input content__calculator__input_weight" id="weight" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <button class="content__calculator__submit-button" type="submit">חשב</button>
+          </fieldset>
+          <fieldset  class="content__calculator__result">
+            
+          </fieldset>
+        </form>
       </section>
 
       <section class="content content_type_fatPercentageCalculate" id="fatPercentageCalculate">
@@ -170,7 +240,29 @@
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
         </ul>
-
+        <form class="content__calculator" id="fatPercentageTest">
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator__gender-label" for="gender">מין:</label>
+            <select class="content__calculator__input content__calculator__input_gender" id="gender">
+              <option class="content__calculator__gender_male" id="gender" value="male">זכר</option>11
+              <option class="content__calculator__gender_female" id="gender" value="female">נקבה</option>
+            </select>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_weight-label" for="weight">משקל:</label>
+            <input class="content__calculator__input content__calculator__input_weight" id="weight" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_waist-label" for="waist">היקף מותניים (במ"מ):</label>
+            <input class="content__calculator__input content__calculator__input_waist" id="waist" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <button class="content__calculator__submit-button" type="submit">חשב</button>
+          </fieldset>
+          <fieldset  class="content__calculator__result">
+            
+          </fieldset>
+        </form>
       </section>
 
       <section class="content content_type_bmiCalculate" id="bmiCalculate">
@@ -179,7 +271,26 @@
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_main" id="main">עמוד ראשי</button></li>
         </ul>
-
+        <form class="content__calculator" id="bmi">
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_age-label" for="hrRest">גיל:</label>
+            <input class="content__calculator__input content__calculator__input_age" id="age" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_height-label" for="height">גובה:</label>
+            <input class="content__calculator__input content__calculator__input_height" id="height" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <label class="content__calculator_weight-label" for="weight">משקל:</label>
+            <input class="content__calculator__input content__calculator__input_weight" id="weight" type="number" placeholder=0>
+          </fieldset>
+          <fieldset class="content__calculator__data">
+            <button class="content__calculator__submit-button" type="submit">חשב</button>
+          </fieldset>
+          <fieldset  class="content__calculator__result">
+            
+          </fieldset>
+        </form>
       </section>
 
       <!-- Body Coordination Test Menu -->
