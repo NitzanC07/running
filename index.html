@@ -15,7 +15,7 @@
     <main class="main-content">
 
       <!-- Main menu -->
-      <section class="content content_type_main content_visible" id="main">
+      <section class="content content_type_main" id="main">
         <h2 class="content__title">עמוד ראשי</h2>
         <p class="content__description">מי אני?</p>
         <ul class="content__menu__list">
@@ -94,7 +94,7 @@
       </section>
 
       <!-- Calculate heart rate training -->
-      <section class="content content_type_hrTargetCalculate" id="hrTargetCalculate">
+      <section class="content content_type_hrTargetCalculate content_visible" id="hrTargetCalculate">
         <h2 class="content__title">חישוב דופק מטרה לאימון</h2>
         <ul class="content__sub-menu__list">
           <li class="content__sub-menu__item"><button class="content__sub-menu__button content__sub-menu__button_type_calculators" id="calculators">מחשבוני כושר</button></li>
@@ -123,11 +123,20 @@
             <button class="content__calculator__submit-button" type="submit">חשב</button>
           </fieldset>
           <fieldset  class="content__calculator__result">
-            תוצאה
+            
           </fieldset>
         </form>
       </section>
       
+      <template id="calculator-result">
+        <table class="result-table">
+          <tr class="table-row">
+            <td class="table-cell"></td>
+            <td class="table-cell"></td>
+          </tr>
+        </table>
+      </template>
+
       <section class="content content_type_vo2maxCooperCalculate" id="vo2maxCooperCalculate">
         <h2 class="content__title">צריכת חמצן מירבית (לפי מבחן קופר)</h2>
         <ul class="content__sub-menu__list">

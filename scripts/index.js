@@ -39,6 +39,11 @@ pages.forEach( (page) => {
     });
 });
 
+function round_number(value, decimals){
+  var shifter = Math.pow(10,decimals);
+  return Math.round(value * shifter) / shifter;
+}
+
 function hrTargets(){
   const age = document.querySelector('.content__calculator__input_age').value;
   const gender = document.querySelector('.content__calculator__input_gender').value;
@@ -51,14 +56,14 @@ function hrTargets(){
   }
   let hrRest = document.querySelector('.content__calculator__input_hrRest').value;
   hrRest = hrRest * 4;
-  const percentages = [0.70, 0.8, 0.85, 0.90, 0.95, 1];
-  const verbals = ["אימון שחרור / התאוששות", "אימון אירובי קל", "אימון אירובי טמפו", "אימון אנאירובי ", "אימון אנאירובי עצים"];
+  const percentages = [1, hrRest, 0.70, 0.8, 0.85, 0.90, 0.95, 1];
+  const verbals = ["דופק מירבי", "דופק מנוחה", "אימון שחרור / התאוששות", "אימון אירובי קל", "אימון אירובי טמפו", "אימון אנאירובי", "אימון אנאירובי עצים"];
   const result = document.querySelector('.content__calculator__result');
-  result.innerHTML = "דופק מירבי מחושב: " + hrMax + " פעימות לדקה." + "<br> דופק מנוחה: " + hrRest + " פעימות לדקה.<br>";
-  for (i = 0; i < percentages.length-1; i = i + 1){
-    const hrTarget = (hrMax - hrRest)*percentages[i] + hrRest;
-    const nextHrTarget = (hrMax - hrRest)*percentages[i+1] + hrRest;
-    result.innerHTML += "<br>טווח " + (i+1) + ": " + verbals[i] + "<br>" + percentages[i]*100 + "% מדופק מירבי " + ((Math.round(nextHrTarget))-1) + " - " + Math.round(hrTarget) + "<br>";
+  result.innerHTML = `${verbals[0]}: ${hrMax}.<br>${verbals[1]}: ${hrRest}.<br>`;
+  for (i = 2; i < percentages.length-1; i++) {
+    const hrTarget = round_number(((hrMax - hrRest)*percentages[i] + hrRest), 0);
+    const nextHrTarget = round_number(((hrMax - hrRest)*percentages[i+1] + hrRest), 0);
+    result.innerHTML += `${verbals[i]}: ${hrTarget} עד ${nextHrTarget} מדופק מירבי.<br>`;
   }
 }
 
