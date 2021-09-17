@@ -1,8 +1,8 @@
 .page {
-    width: 90%;
+    width: 100%;
     max-width: 1600px;
-    height: 97vh;
-    margin: 0 auto;
+    min-width: 300px;
+    margin: 0;
     padding: 0;
     background-color: rgba(100, 0, 0, 1);
     color: rgba(255, 230, 230, 1);

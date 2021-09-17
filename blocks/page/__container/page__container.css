@@ -1,13 +1,23 @@
 .page__container{
     max-width: 1100px;
-    min-width: 320px;
-    height: 95vh;
+    /* min-width: 320px; */
+    height: 94vh;
     margin: 25px auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1140px) {
     .page__container{
-        margin: 25px 40px;
+        margin: 15px 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page__container{
+        height: 98vh;
+        margin: 5px 10px;
     }
 }

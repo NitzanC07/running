@@ -10,7 +10,7 @@
 }
 
 .content__menu__button:hover{
-    background-color: rgba(255, 200, 200, 0.5);
+    background-color: rgba(255, 200, 200, 0.8);
     box-shadow: 10px 10px 10px #aaa;
     border-color: #ffa;
 }

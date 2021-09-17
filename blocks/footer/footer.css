@@ -1,9 +1,15 @@
 .footer{
     width: 100%;
-    margin: 0 auto;
+    height: 125px;
+    margin: 20px auto 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-        bottom: 0;
+    position: relative;
+}
+
+@media screen and (max-width: 900px){
+    .footer{
+        height: 80px;
+    }
 }
